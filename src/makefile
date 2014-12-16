@@ -6,6 +6,9 @@
 # $Revision$
 #
 # $Log$
+# Revision 1.2  2014/12/16 15:59:28  hib
+# Cleanup - should be complete now
+#
 # Revision 1.1  2014/12/16 15:48:56  hib
 # initial checkin for gpl
 #
@@ -27,7 +30,7 @@
 #    verify_captcha.pl \
 
 system: $(ALL) 
-	chmod 755 *.sh *.pl
+	chmod 755 *.sh 
 	cp $(ALL) ../bin
 
 clip_to_1_char: clip_to_1_char.c util.o 
