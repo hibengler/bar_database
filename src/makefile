@@ -6,6 +6,9 @@
 # $Revision$
 #
 # $Log$
+# Revision 1.4  2014/12/16 16:10:54  hib
+# forgot soundex
+#
 # Revision 1.3  2014/12/16 16:08:37  hib
 # Getting closer to being complete
 #
@@ -33,7 +36,7 @@
 
 	ALLINC = bsearch.h  soundex.h  utarray.h  uthash.h  util.h  utlist.h  utstring.h
 
-	ALLLIB = bsearch.o util.o
+	ALLLIB = bsearch.o util.o soundex.o
 
 
 #    verify_captcha.pl \
