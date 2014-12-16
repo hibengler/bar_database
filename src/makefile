@@ -6,6 +6,9 @@
 # $Revision$
 #
 # $Log$
+# Revision 1.3  2014/12/16 16:08:37  hib
+# Getting closer to being complete
+#
 # Revision 1.2  2014/12/16 15:59:28  hib
 # Cleanup - should be complete now
 #
@@ -14,7 +17,7 @@
 #
 #
 
-	ALL =field fieldu fielduc match \
+	ALLEXE =field fieldu fielduc match \
     set_id add_id is_it_filled_in find_duplicate_records \
     set_field fsort \
     clip_to_1_char \
@@ -27,11 +30,28 @@
     dos2unix 
 
 
+
+	ALLINC = bsearch.h  soundex.h  utarray.h  uthash.h  util.h  utlist.h  utstring.h
+
+	ALLLIB = bsearch.o util.o
+
+
 #    verify_captcha.pl \
 
-system: $(ALL) 
+system: allexe.flag allinc.flag alllib.flag
+
+allexe.flag: 	$(ALLEXE) 
 	chmod 755 *.sh 
-	cp $(ALL) ../bin
+	cp $(ALLEXE) ../bin
+	touch allexe.flag
+
+alllib.flag: 	$(ALLLIB) 
+	cp $(ALLLIB) ../lib
+	touch alllib.flag
+
+allinc.flag: 	$(ALLINC) 
+	cp $(ALLINC) ../include
+	touch allinc.flag
 
 clip_to_1_char: clip_to_1_char.c util.o 
 	gcc -O3 -o clip_to_1_char clip_to_1_char.c util.o bsearch.o
