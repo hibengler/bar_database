@@ -1,4 +1,29 @@
 /* 
+bar_database - commands to manipulate vertical bar delimited fields as a NOSql style database.
+Copyright (C) 2011-2014  Hibbard M. Engler of Killer Cool Development, LLC.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+$Revision$ fsort.c
+
+$Log$
+Revision 1.2  2014/12/16 17:35:00  hib
+Added GPL to the c and h files. GPL 2.0 for stand alone commands, and LGPL 2.1 for the
+libraries (.o files). Yo!
+
+
 V1.7 added -Q which is for 64 bit numbers
 V1.6 added -l that allows restriction to a certain number of characters for a field
 V1.5 - added -q - to add an id number at the beginning of the output

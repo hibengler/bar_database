@@ -6,6 +6,10 @@
 # $Revision$
 #
 # $Log$
+# Revision 1.5  2014/12/16 17:35:00  hib
+# Added GPL to the c and h files. GPL 2.0 for stand alone commands, and LGPL 2.1 for the
+# libraries (.o files). Yo!
+#
 # Revision 1.4  2014/12/16 16:10:54  hib
 # forgot soundex
 #
@@ -34,9 +38,9 @@
 
 
 
-	ALLINC = bsearch.h  soundex.h  utarray.h  uthash.h  util.h  utlist.h  utstring.h
+	ALLINC = bsearch.h    utarray.h  uthash.h  util.h  utlist.h  utstring.h
 
-	ALLLIB = bsearch.o util.o soundex.o
+	ALLLIB = bsearch.o util.o 
 
 
 #    verify_captcha.pl \
@@ -105,9 +109,6 @@ flip_flop:	flip_flop.c
 util.o: util.c util.h
 	gcc -O3 -c util.c
 
-soundex.o: soundex.c soundex.h
-	gcc -O3 -c soundex.c
-	
 bsearch.o: bsearch.c bsearch.h
 	gcc -O3 -c bsearch.c
 
